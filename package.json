@@ -4,7 +4,7 @@
   "description": "Get the weather forecast for any location",
   "main": "config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,11 @@
   },
   "homepage": "https://github.com/hadimir22/weather-monitor#readme",
   "dependencies": {
+    "chalk": "^2.4.2",
     "express": "^4.17.1",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }

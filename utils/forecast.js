@@ -2,8 +2,8 @@ const request = require("request");
 const keys = require("../config");
 
 const forecast = (lat, long, callback) => {
-  var url = ` https://api.darksky.net/forecast/${
-    keys.mapBoxApi
+  var url = `https://api.darksky.net/forecast/${
+    keys.darkSkyApiKey
   }/${lat},${long}`;
 
   request({ url: url, json: true }, function(error, response) {
