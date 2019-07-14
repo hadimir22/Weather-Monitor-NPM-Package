@@ -4,7 +4,7 @@ const keys = require("../config");
 const forecast = (lat, long, callback) => {
   var url = `https://api.darksky.net/forecast/${
     keys.darkSkyApiKey
-  }/${lat},${long}`;
+  }/${lat},${long}?units=auto`;
 
   request({ url: url, json: true }, function(error, response) {
     if (error) {

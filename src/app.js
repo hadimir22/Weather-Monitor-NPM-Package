@@ -2,7 +2,7 @@ const geocode = require("../utils/geocode");
 const forecast = require("../utils/forecast");
 const chalk = require("chalk");
 
-getForecast = (location, callback) => {
+getForecast = (location = "srinagar", callback) => {
   if (!location) {
     console.log(chalk.red.bold("No location provided"));
   } else {
@@ -26,5 +26,5 @@ getForecast = (location, callback) => {
 };
 
 getForecast("srinagar", data => {
-  console.log("here", data);
+  console.log("forecast", data);
 });
