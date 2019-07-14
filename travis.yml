@@ -6,8 +6,7 @@ node_js:
 deploy:
   provider: npm
   email: "hadimir22@gmail.com"
-  api_key: "YOUR_AUTH_TOKEN"
+  api_key: "562c512b-33ba-4dee-b7d0-3207fb7e9510"
   skip_cleanup: true
-  github_token: $github_token
   on:
     branch: master
