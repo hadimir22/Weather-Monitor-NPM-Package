@@ -2,9 +2,9 @@
   "name": "weather-monitor",
   "version": "1.0.0",
   "description": "Get the weather forecast for any location",
-  "main": "config.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon src/app.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",

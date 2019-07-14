@@ -1,5 +1,5 @@
-const geocode = require("../utils/geocode");
-const forecast = require("../utils/forecast");
+const geocode = require("./utils/geocode");
+const forecast = require("./utils/forecast");
 const chalk = require("chalk");
 
 getForecast = (location = "srinagar", callback) => {
@@ -25,6 +25,4 @@ getForecast = (location = "srinagar", callback) => {
   }
 };
 
-getForecast("srinagar", data => {
-  console.log("forecast", data);
-});
+module.exports = getForecast;
