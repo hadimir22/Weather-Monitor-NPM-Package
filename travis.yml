@@ -7,6 +7,7 @@ deploy:
   provider: npm
   email: "hadimir22@gmail.com"
   api_key: "562c512b-33ba-4dee-b7d0-3207fb7e9510"
+  github_token: $github_token
   skip_cleanup: true
   on:
     branch: master
