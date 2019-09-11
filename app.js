@@ -1,5 +1,6 @@
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
+const chalk = require("chalk");
 
 getForecast = async (location = "srinagar") => {
   try {
@@ -8,6 +9,8 @@ getForecast = async (location = "srinagar") => {
     const data = {
       temperature: forecastData.temp,
       rainProbability: forecastData.rain,
+      humidity: forecastData.humidity,
+      windSpeed: forecastData.windSpeed,
       forLocation: geoData.location
     };
     console.log(data);
@@ -15,5 +18,7 @@ getForecast = async (location = "srinagar") => {
     console.log(err);
   }
 };
+
+getForecast("berlin");
 
 module.exports = getForecast;

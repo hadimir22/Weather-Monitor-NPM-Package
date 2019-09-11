@@ -1,6 +1,6 @@
 {
   "name": "weather-monitor",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Get the weather forecast for any location",
   "main": "app.js",
   "scripts": {

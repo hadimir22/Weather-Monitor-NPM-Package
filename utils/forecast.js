@@ -13,7 +13,9 @@ const forecast = (lat, long) => {
       } else {
         let data = {
           temp: response.body.currently.temperature,
-          rain: response.body.currently.precipProbability
+          rain: response.body.currently.precipProbability,
+          humidity: response.body.currently.humidity,
+          windSpeed: response.body.currently.windSpeed
         };
         resolve(data);
       }
