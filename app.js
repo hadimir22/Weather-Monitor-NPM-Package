@@ -2,26 +2,18 @@ const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 const chalk = require("chalk");
 
-getForecast = (location = "srinagar", callback) => {
-  if (!location) {
-    console.log(chalk.red.bold("No location provided"));
-  } else {
-    geocode(location, (err, data) => {
-      if (err) {
-        return console.log(chalk.red.bold(err));
-      }
-      forecast(data.lat, data.long, (err, forecastdata) => {
-        if (err) {
-          return console.log(chalk.red.bold(err));
-        }
-        const forecast = {
-          temperature: forecastdata.temp,
-          rainProbability: forecastdata.rain,
-          forLocation: data.location
-        };
-        callback(forecast);
-      });
-    });
+getForecast = async (location = "srinagar") => {
+  try {
+    let geoData = await geocode(location);
+    let forecastData = await forecast(geoData.lat, geoData.long);
+    const data = {
+      temperature: forecastData.temp,
+      rainProbability: forecastData.rain,
+      forLocation: geoData.location
+    };
+    console.log(data);
+  } catch (err) {
+    console.log(err);
   }
 };
 
