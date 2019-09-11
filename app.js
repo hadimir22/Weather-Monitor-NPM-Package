@@ -19,6 +19,4 @@ getForecast = async (location = "srinagar") => {
   }
 };
 
-getForecast("berlin");
-
 module.exports = getForecast;

@@ -12,9 +12,8 @@ With the **Weather Forecast API**. you can get the forecast of any location easi
 
       const getForecast = require("weather-monitor");
 
-       getForecast("srinagar", (data) => {
-      	console.log("forecast", data);
-      	});
+       let data = getForecast("srinagar");
+       console.log(data);
 
 # Response
 
