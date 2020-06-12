@@ -16,6 +16,7 @@ const forecast = (lat, long) => {
           rain: response.body.currently.precipProbability,
           humidity: response.body.currently.humidity,
           cloudCover: response.body.currently.cloudCover,
+          visibility: response.body.currently.visibility,
           windSpeed: response.body.currently.windSpeed,
         };
         resolve(data);

@@ -12,6 +12,7 @@ getForecast = async (location = "srinagar") => {
       rainProbability: forecastData.rain,
       humidity: forecastData.humidity,
       cloudCover: forecastData.cloudCover,
+      visibility: forecastData.visibility,
       windSpeed: forecastData.windSpeed,
     };
     console.log(data);
@@ -20,5 +21,4 @@ getForecast = async (location = "srinagar") => {
   }
 };
 
-getForecast();
-// module.exports = getForecast;
+module.exports = getForecast;
