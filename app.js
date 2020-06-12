@@ -7,11 +7,12 @@ getForecast = async (location = "srinagar") => {
     let geoData = await geocode(location);
     let forecastData = await forecast(geoData.lat, geoData.long);
     const data = {
+      forLocation: geoData.location,
       temperature: forecastData.temp,
       rainProbability: forecastData.rain,
       humidity: forecastData.humidity,
+      cloudCover: forecastData.cloudCover,
       windSpeed: forecastData.windSpeed,
-      forLocation: geoData.location
     };
     console.log(data);
   } catch (err) {
@@ -19,4 +20,5 @@ getForecast = async (location = "srinagar") => {
   }
 };
 
-module.exports = getForecast;
+getForecast();
+// module.exports = getForecast;

@@ -5,7 +5,7 @@ const forecast = (lat, long) => {
   return new Promise((resolve, reject) => {
     let url = `https://api.darksky.net/forecast/${keys.darkSkyApiKey}/${lat},${long}?units=auto`;
 
-    request({ url: url, json: true }, function(error, response) {
+    request({ url: url, json: true }, function (error, response) {
       if (error) {
         reject({ error: "unable to fetch" });
       } else if (response.body.error) {
@@ -15,7 +15,8 @@ const forecast = (lat, long) => {
           temp: response.body.currently.temperature,
           rain: response.body.currently.precipProbability,
           humidity: response.body.currently.humidity,
-          windSpeed: response.body.currently.windSpeed
+          cloudCover: response.body.currently.cloudCover,
+          windSpeed: response.body.currently.windSpeed,
         };
         resolve(data);
       }
