@@ -27,5 +27,8 @@
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
