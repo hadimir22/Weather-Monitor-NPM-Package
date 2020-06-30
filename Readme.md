@@ -22,6 +22,8 @@ With the **Weather Forecast API**. you can get the forecast of any location easi
             rainProbability: 0,
             humidity: 0.73,
             windSpeed: 1.96,
+            cloudCover: 0.2,
+            visibility:5,
             forLocation: 'Srinagar Kashmir'
 
        }
